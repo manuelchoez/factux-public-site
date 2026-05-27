@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#f5f7fb] text-ink antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(113, 199, 192, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(207, 164, 92, 0.12), transparent 22%),
+    linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+}
+
+::selection {
+  background: rgba(113, 199, 192, 0.3);
+}
+
+.container-shell {
+  @apply mx-auto max-w-7xl px-6 lg:px-8;
+}
+
+.section-space {
+  @apply py-20 lg:py-28;
+}
+
+.eyebrow {
+  @apply inline-flex items-center rounded-full border border-white/10 bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-slate backdrop-blur;
+}
+
+.card-surface {
+  @apply rounded-[28px] border border-white/70 bg-white/85 shadow-soft backdrop-blur;
+}
+
+.nav-link {
+  @apply text-sm font-medium text-slate transition hover:text-ink;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-steel;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-ink/15 bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:border-ink/35 hover:bg-white/80;
+}
