@@ -31,12 +31,12 @@ const footerGroups = [
 
 export function Footer() {
   return (
-    <footer className="container-shell pb-10 pt-8">
-      <div className="card-surface px-8 py-10">
+    <footer className="container-shell pb-8 pt-6 sm:pb-10 sm:pt-8">
+      <div className="card-surface px-5 py-8 sm:px-8 sm:py-10">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="max-w-xl">
             <div className="text-sm uppercase tracking-[0.24em] text-slate">FactuX</div>
-            <h2 className="mt-4 text-3xl font-semibold text-ink">
+            <h2 className="mt-4 text-2xl font-semibold text-ink sm:text-3xl">
               Una presencia publica sobria, confiable y preparada para convertir.
             </h2>
             <p className="mt-4 text-base leading-7 text-slate">
@@ -45,7 +45,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {footerGroups.map((group) => (
               <div key={group.title}>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-ink">

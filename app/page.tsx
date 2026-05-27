@@ -37,28 +37,28 @@ const workflow = [
 export default function HomePage() {
   return (
     <>
-      <section className="container-shell section-space pt-10 lg:pt-16">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="space-y-8">
+      <section className="container-shell section-space pt-6 sm:pt-10 lg:pt-16">
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-10">
+          <div className="space-y-6 sm:space-y-8">
             <span className="eyebrow">Facturacion moderna para emisores en Ecuador</span>
-            <div className="space-y-6">
-              <h1 className="max-w-3xl text-5xl font-semibold leading-tight text-ink md:text-6xl">
+            <div className="space-y-5 sm:space-y-6">
+              <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-ink sm:text-5xl md:text-6xl">
                 Un sitio serio para una plataforma que debe inspirar confianza real.
               </h1>
-              <p className="max-w-2xl text-lg leading-8 text-slate">
+              <p className="max-w-2xl text-base leading-7 text-slate sm:text-lg sm:leading-8">
                 FactuX ayuda a profesionales, firmas y pequenas empresas a operar con una presencia
                 mas ejecutiva, una administracion mas clara y una base tecnologica lista para crecer.
               </p>
             </div>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/contacto" className="button-primary">
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <Link href="/contacto" className="button-primary w-full sm:w-auto">
                 Solicitar demostracion
               </Link>
-              <Link href="/precios" className="button-secondary">
+              <Link href="/precios" className="button-secondary w-full sm:w-auto">
                 Ver planes
               </Link>
             </div>
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {metrics.map((item) => (
                 <div key={item.value} className="card-surface p-5">
                   <div className="text-2xl font-semibold text-ink">{item.value}</div>
@@ -68,26 +68,26 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="card-surface relative overflow-hidden p-8 lg:p-10">
+          <div className="card-surface relative overflow-hidden p-5 sm:p-8 lg:p-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(113,199,192,0.18),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(207,164,92,0.18),transparent_28%)]" />
-            <div className="relative space-y-6">
-              <div className="rounded-[24px] bg-ink p-6 text-white">
+            <div className="relative space-y-5 sm:space-y-6">
+              <div className="rounded-[24px] bg-ink p-5 text-white sm:p-6">
                 <div className="text-sm uppercase tracking-[0.24em] text-white/60">FactuX Platform</div>
-                <div className="mt-4 text-3xl font-semibold leading-tight">
+                <div className="mt-4 text-2xl font-semibold leading-tight sm:text-3xl">
                   Una experiencia limpia, sobria y lista para ventas, soporte y crecimiento.
                 </div>
                 <div className="mt-6 grid gap-4 md:grid-cols-2">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                     <div className="text-sm text-white/70">Operacion ordenada</div>
-                    <div className="mt-2 text-xl font-semibold">Emisores, usuarios y productos</div>
+                    <div className="mt-2 text-lg font-semibold sm:text-xl">Emisores, usuarios y productos</div>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                     <div className="text-sm text-white/70">Direccion comercial</div>
-                    <div className="mt-2 text-xl font-semibold">Sitio publico con tono premium</div>
+                    <div className="mt-2 text-lg font-semibold sm:text-xl">Sitio publico con tono premium</div>
                   </div>
                 </div>
               </div>
-              <div className="grid gap-4 md:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
                 {workflow.map((step, index) => (
                   <div key={step} className="rounded-[22px] border border-ink/10 bg-white p-5">
                     <div className="text-sm font-semibold text-gold">0{index + 1}</div>
@@ -106,10 +106,10 @@ export default function HomePage() {
           title="La presencia publica debe vender con claridad y sin verse improvisada."
           description="El sitio se disena para posicionar a FactuX como una solucion confiable, sobria y tecnicamente seria."
         />
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit) => (
-            <article key={benefit.title} className="card-surface p-8">
-              <h3 className="text-2xl font-semibold text-ink">{benefit.title}</h3>
+            <article key={benefit.title} className="card-surface p-6 sm:p-8">
+              <h3 className="text-xl font-semibold text-ink sm:text-2xl">{benefit.title}</h3>
               <p className="mt-4 text-base leading-7 text-slate">{benefit.description}</p>
             </article>
           ))}

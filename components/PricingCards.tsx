@@ -22,21 +22,21 @@ const plans = [
 
 export function PricingCards() {
   return (
-    <div className="grid gap-6 lg:grid-cols-3">
+    <div className="grid gap-6 xl:grid-cols-3">
       {plans.map((plan) => (
         <article
           key={plan.name}
-          className={`card-surface p-8 ${plan.featured ? 'relative border-gold/40 bg-ink text-white' : ''}`}
+          className={`card-surface p-6 sm:p-8 ${plan.featured ? 'relative border-gold/40 bg-ink text-white xl:-translate-y-3' : ''}`}
         >
           {plan.featured ? (
-            <div className="absolute right-6 top-6 rounded-full bg-gold px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+            <div className="absolute right-5 top-5 rounded-full bg-gold px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-ink sm:right-6 sm:top-6">
               Recomendado
             </div>
           ) : null}
           <div className={`text-sm uppercase tracking-[0.24em] ${plan.featured ? 'text-white/60' : 'text-slate'}`}>
             {plan.name}
           </div>
-          <div className="mt-5 text-4xl font-semibold">{plan.price}</div>
+          <div className="mt-5 text-3xl font-semibold sm:text-4xl">{plan.price}</div>
           <p className={`mt-4 text-sm leading-7 ${plan.featured ? 'text-white/80' : 'text-slate'}`}>
             {plan.description}
           </p>

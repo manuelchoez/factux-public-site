@@ -33,7 +33,7 @@ export function CookieBanner() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 p-4 sm:p-6">
       <div className="container-shell">
-        <div className="card-surface border-ink/10 bg-white/95 p-5 shadow-[0_24px_80px_rgba(12,23,40,0.22)]">
+        <div className="card-surface border-ink/10 bg-white/95 p-4 shadow-[0_24px_80px_rgba(12,23,40,0.22)] sm:p-5">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-ink">
@@ -50,18 +50,18 @@ export function CookieBanner() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row sm:self-start">
               <button
                 type="button"
                 onClick={() => saveConsent('rejected')}
-                className="button-secondary"
+                className="button-secondary w-full sm:w-auto"
               >
                 Rechazar
               </button>
               <button
                 type="button"
                 onClick={() => saveConsent('accepted')}
-                className="button-primary"
+                className="button-primary w-full sm:w-auto"
               >
                 Aceptar todas
               </button>

@@ -29,8 +29,8 @@ export default function ContactPage() {
       />
 
       <div className="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <section className="card-surface p-8 lg:p-10">
-          <h2 className="text-3xl font-semibold text-ink">Canales sugeridos</h2>
+        <section className="card-surface p-6 sm:p-8 lg:p-10">
+          <h2 className="text-2xl font-semibold text-ink sm:text-3xl">Canales sugeridos</h2>
           <div className="mt-6 space-y-4">
             {contactCards.map((card) => (
               <article key={card.title} className="rounded-2xl border border-ink/10 bg-white p-5">
@@ -41,8 +41,8 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="card-surface p-8 lg:p-10">
-          <h2 className="text-3xl font-semibold text-ink">Hablemos</h2>
+        <section className="card-surface p-6 sm:p-8 lg:p-10">
+          <h2 className="text-2xl font-semibold text-ink sm:text-3xl">Hablemos</h2>
           <form className="mt-6 grid gap-5">
             <label className="grid gap-2">
               <span className="text-sm font-medium text-ink">Nombre</span>
@@ -71,7 +71,7 @@ export default function ContactPage() {
             <label className="grid gap-2">
               <span className="text-sm font-medium text-ink">Mensaje</span>
               <textarea
-                placeholder="Cuéntanos que necesitas"
+                placeholder="Cuentanos que necesitas"
                 rows={5}
                 className="rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm outline-none transition focus:border-aqua"
               />
