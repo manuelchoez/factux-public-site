@@ -1,11 +1,10 @@
 import { PageIntro } from '@/components/PageIntro';
 import { PricingCards } from '@/components/PricingCards';
+import { useDocumentMeta } from '@/src/hooks/useDocumentMeta';
 
-export const metadata = {
-  title: 'Precios',
-};
+export function PricingPage() {
+  useDocumentMeta('Precios');
 
-export default function PricingPage() {
   return (
     <div className="container-shell section-space">
       <PageIntro

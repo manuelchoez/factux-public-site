@@ -1,3 +1,3 @@
 export const siteConfig = {
-  appLoginUrl: process.env.NEXT_PUBLIC_APP_LOGIN_URL ?? 'http://localhost:5173/login',
+  appLoginUrl: import.meta.env.VITE_APP_LOGIN_URL ?? 'http://localhost:5173/login',
 };

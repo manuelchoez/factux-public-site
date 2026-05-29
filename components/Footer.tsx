@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { siteConfig } from '@/lib/siteConfig';
+import { SmartLink } from '@/src/components/SmartLink';
 
 const footerGroups = [
   {
@@ -53,9 +53,9 @@ export function Footer() {
                 </h3>
                 <div className="mt-4 grid gap-3">
                   {group.links.map((link) => (
-                    <Link key={link.href} href={link.href} className="text-sm text-slate transition hover:text-ink">
+                    <SmartLink key={link.href} href={link.href} className="text-sm text-slate transition hover:text-ink">
                       {link.label}
-                    </Link>
+                    </SmartLink>
                   ))}
                 </div>
               </div>

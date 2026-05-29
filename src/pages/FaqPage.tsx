@@ -1,11 +1,10 @@
 import { FaqPreview } from '@/components/FaqPreview';
 import { PageIntro } from '@/components/PageIntro';
+import { useDocumentMeta } from '@/src/hooks/useDocumentMeta';
 
-export const metadata = {
-  title: 'FAQ',
-};
+export function FaqPage() {
+  useDocumentMeta('FAQ');
 
-export default function FaqPage() {
   return (
     <div className="container-shell section-space">
       <PageIntro

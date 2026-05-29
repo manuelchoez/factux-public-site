@@ -1,8 +1,9 @@
-import Link from 'next/link';
 import { FaqPreview } from '@/components/FaqPreview';
 import { PageIntro } from '@/components/PageIntro';
 import { PricingCards } from '@/components/PricingCards';
 import { SectionHeading } from '@/components/SectionHeading';
+import { SmartLink } from '@/src/components/SmartLink';
+import { useDocumentMeta } from '@/src/hooks/useDocumentMeta';
 
 const metrics = [
   { value: '24/7', label: 'Disponibilidad para operar y revisar tu negocio' },
@@ -34,7 +35,9 @@ const workflow = [
   'Emite con orden, control y una operacion lista para escalar.',
 ];
 
-export default function HomePage() {
+export function HomePage() {
+  useDocumentMeta();
+
   return (
     <>
       <section className="container-shell section-space pt-6 sm:pt-10 lg:pt-16">
@@ -51,12 +54,12 @@ export default function HomePage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-              <Link href="/contacto" className="button-primary w-full sm:w-auto">
+              <SmartLink href="/contacto" className="button-primary w-full sm:w-auto">
                 Solicitar demostracion
-              </Link>
-              <Link href="/precios" className="button-secondary w-full sm:w-auto">
+              </SmartLink>
+              <SmartLink href="/precios" className="button-secondary w-full sm:w-auto">
                 Ver planes
-              </Link>
+              </SmartLink>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {metrics.map((item) => (

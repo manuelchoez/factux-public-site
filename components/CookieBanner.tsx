@@ -1,7 +1,5 @@
-'use client';
-
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { SmartLink } from '@/src/components/SmartLink';
 
 const COOKIE_CONSENT_KEY = 'factux.cookie-consent';
 
@@ -43,9 +41,9 @@ export function CookieBanner() {
                 Utilizamos cookies esenciales para el funcionamiento del sitio y, si lo
                 autorizas, cookies adicionales para analitica y mejora de la experiencia.
                 Puedes revisar los detalles en nuestra{' '}
-                <Link href="/cookies" className="font-semibold text-ink underline decoration-ink/30 underline-offset-4">
+                <SmartLink href="/cookies" className="font-semibold text-ink underline decoration-ink/30 underline-offset-4">
                   politica de cookies
-                </Link>
+                </SmartLink>
                 .
               </p>
             </div>

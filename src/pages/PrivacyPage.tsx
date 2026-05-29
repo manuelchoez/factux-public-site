@@ -1,10 +1,9 @@
 import { LegalPage } from '@/components/LegalPage';
+import { useDocumentMeta } from '@/src/hooks/useDocumentMeta';
 
-export const metadata = {
-  title: 'Politica de privacidad',
-};
+export function PrivacyPage() {
+  useDocumentMeta('Politica de privacidad');
 
-export default function PrivacyPage() {
   return (
     <LegalPage
       eyebrow="Legal"

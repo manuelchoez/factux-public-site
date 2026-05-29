@@ -1,4 +1,5 @@
 import { PageIntro } from '@/components/PageIntro';
+import { useDocumentMeta } from '@/src/hooks/useDocumentMeta';
 
 const principles = [
   'Disenar tecnologia que proyecte seriedad desde el primer contacto.',
@@ -6,11 +7,9 @@ const principles = [
   'Construir una base lista para integraciones, nuevos canales y crecimiento sostenible.',
 ];
 
-export const metadata = {
-  title: 'Sobre FactuX',
-};
+export function AboutPage() {
+  useDocumentMeta('Sobre FactuX');
 
-export default function AboutPage() {
   return (
     <div className="container-shell section-space">
       <PageIntro

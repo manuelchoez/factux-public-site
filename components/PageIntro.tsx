@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { SmartLink } from '@/src/components/SmartLink';
 
 type PageIntroProps = {
   eyebrow: string;
@@ -18,9 +18,9 @@ export function PageIntro({ eyebrow, title, description, cta }: PageIntroProps) 
       <p className="mt-6 max-w-3xl text-base leading-7 text-slate sm:text-lg sm:leading-8">{description}</p>
       {cta ? (
         <div className="mt-8">
-          <Link href={cta.href} className="button-primary w-full sm:w-auto">
+          <SmartLink href={cta.href} className="button-primary w-full sm:w-auto">
             {cta.label}
-          </Link>
+          </SmartLink>
         </div>
       ) : null}
     </div>

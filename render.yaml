@@ -1,13 +1,15 @@
 services:
-  - type: web
+  - type: static
     name: factux-public-site
-    runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm install && npm run build
-    startCommand: npm run start
-    healthCheckPath: /
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     envVars:
       - key: NODE_VERSION
         value: 22
-      - key: NEXT_PUBLIC_APP_LOGIN_URL
+      - key: VITE_APP_LOGIN_URL
         sync: false

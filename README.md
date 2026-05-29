@@ -1,6 +1,6 @@
 # FactuX Public Site
 
-Sitio publico de FactuX construido con Next.js, TypeScript y Tailwind.
+Sitio publico de FactuX construido con `React`, `Vite`, `TypeScript` y `Tailwind`.
 
 ## Desarrollo local
 
@@ -23,27 +23,27 @@ npm run dev
 La URL del boton `Iniciar sesion` se controla con:
 
 ```env
-NEXT_PUBLIC_APP_LOGIN_URL=https://tu-app-admin.onrender.com/login
+VITE_APP_LOGIN_URL=https://tu-app-admin.onrender.com/login
 ```
 
 ## Deploy en Render
 
-Este proyecto incluye `render.yaml`.
+Este proyecto esta configurado para `Static Site`.
 
 Configuracion principal:
 
-- Runtime: `Node`
+- Type: `Static Site`
 - Build Command: `npm install && npm run build`
-- Start Command: `npm run start`
-- Health Check Path: `/`
+- Publish Directory: `dist`
+- Rewrite SPA: `/* -> /index.html`
 
-### Opcion 1: Repo dedicado
+### Repo dedicado
 
 Si subes `factux-public-site` como repositorio independiente, Render detecta `render.yaml` en la raiz y solo debes definir:
 
-- `NEXT_PUBLIC_APP_LOGIN_URL`
+- `VITE_APP_LOGIN_URL`
 
-### Opcion 2: Monorepo
+### Monorepo
 
 Si este proyecto vive dentro de un repositorio mas grande, en Render define el `Root Directory` como:
 
@@ -54,9 +54,9 @@ factux-public-site
 Y luego agrega la variable:
 
 ```env
-NEXT_PUBLIC_APP_LOGIN_URL=https://tu-app-admin.onrender.com/login
+VITE_APP_LOGIN_URL=https://tu-app-admin.onrender.com/login
 ```
 
 ## Nota importante
 
-`NEXT_PUBLIC_APP_LOGIN_URL` es publica por definicion, porque Next.js la expone al frontend. No pongas secretos usando prefijo `NEXT_PUBLIC_`.
+`VITE_APP_LOGIN_URL` es publica por definicion porque queda embebida en el frontend compilado. No uses este prefijo para secretos.

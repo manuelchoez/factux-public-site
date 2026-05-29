@@ -1,6 +1,9 @@
-import Link from 'next/link';
+import { SmartLink } from '@/src/components/SmartLink';
+import { useDocumentMeta } from '@/src/hooks/useDocumentMeta';
 
-export default function NotFound() {
+export function NotFoundPage() {
+  useDocumentMeta('404');
+
   return (
     <div className="container-shell section-space">
       <div className="card-surface max-w-3xl p-10">
@@ -13,12 +16,12 @@ export default function NotFound() {
           o continuar con las secciones principales del sitio.
         </p>
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <Link href="/" className="button-primary">
+          <SmartLink href="/" className="button-primary">
             Ir al inicio
-          </Link>
-          <Link href="/contacto" className="button-secondary">
+          </SmartLink>
+          <SmartLink href="/contacto" className="button-secondary">
             Contacto
-          </Link>
+          </SmartLink>
         </div>
       </div>
     </div>

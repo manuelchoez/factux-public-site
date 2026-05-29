@@ -1,10 +1,9 @@
 import { LegalPage } from '@/components/LegalPage';
+import { useDocumentMeta } from '@/src/hooks/useDocumentMeta';
 
-export const metadata = {
-  title: 'Terminos y condiciones',
-};
+export function TermsPage() {
+  useDocumentMeta('Terminos y condiciones');
 
-export default function TermsPage() {
   return (
     <LegalPage
       eyebrow="Legal"

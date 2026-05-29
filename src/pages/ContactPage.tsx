@@ -1,4 +1,5 @@
 import { PageIntro } from '@/components/PageIntro';
+import { useDocumentMeta } from '@/src/hooks/useDocumentMeta';
 
 const contactCards = [
   {
@@ -15,11 +16,9 @@ const contactCards = [
   },
 ];
 
-export const metadata = {
-  title: 'Contacto',
-};
+export function ContactPage() {
+  useDocumentMeta('Contacto');
 
-export default function ContactPage() {
   return (
     <div className="container-shell section-space">
       <PageIntro
